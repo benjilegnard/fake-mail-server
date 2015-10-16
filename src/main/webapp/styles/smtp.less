@@ -1,0 +1,71 @@
+//SIZING
+@borderRadius:.5rem;
+
+//customs SMTP COLORS
+@primary-color: #33c3f0;
+@primary-border-color: #4A9AB4;
+@primary-dark-color: #11799C;
+
+@error-color:#ff4f2e;
+@error-border-color:#BF5C4A;
+@error-dark-color:#A6260F;
+
+@warn-color:#ffC22e;
+@warn-border-color:#BF9D4A;
+@warn-dark-color:#A6790F;
+
+@success-color:#2CF470;
+@success-border-color:#47B76D;
+@success-dark-color:#0E9F3F;
+
+
+.message(@lightColor, @darkColor){
+  border:1px solid @lightColor;
+  background-color:white;
+  color:@darkColor;
+}
+
+.message
+{
+  padding: 0 14px;
+  height: 38px;
+  line-height: 38px;
+  font-weight:bold;
+  margin-bottom:2.5rem;
+  border-radius:@borderRadius;
+
+  &.success
+  {
+    .message(@success-color,@success-border-color);
+  }
+
+  &.error
+  {
+    .message(@error-color,@error-border-color);
+  }
+
+  &.warning
+  {
+    .message(@warn-color,@warn-border-color);
+  }
+}
+#message-list{
+
+}
+
+#message-details{
+
+}
+
+#server-form
+{
+  margin-top:2.5rem;
+
+  &.started
+  {
+    button
+    {
+
+    }
+  }
+}

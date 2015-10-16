@@ -1,0 +1,21 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="ch.qos.logback" level="DEBUG"/>
+    <logger name="com.fasterxml.jackson" level="INFO"/>
+    <logger name="com.google.guava" level="INFO"/>
+    <logger name="org.glassfish.jersey" level="DEBUG"/>
+    <logger name="org.jboss.weld" level="INFO"/>
+    <logger name="io.github.jibhaine.smtp" level="DEBUG"/>
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
