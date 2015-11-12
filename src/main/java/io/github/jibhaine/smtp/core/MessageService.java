@@ -20,7 +20,7 @@ public class MessageService {
     private static final Logger LOGGER = LoggerFactory.getLogger(MessageService.class);
 
     @Inject
-    private WiserService wiserService;
+    private  SessionService sessionService;
 
     private Map<String, Message> storedMessages;
 
@@ -33,6 +33,7 @@ public class MessageService {
         return storedMessages.get(uuid);
     }
 
+/*
     public synchronized void synchronizeMessage() {
         LOGGER.debug("Synchronizing Messages ...");
         for (WiserMessage wiserMessage : wiserService.getMessages()) {
@@ -54,5 +55,5 @@ public class MessageService {
         }
     }
 
-
+*/
 }

@@ -42,12 +42,14 @@
             <version>2.2.15.Final</version>
         </dependency>
 
-        <!-- websockets
+        <!-- websockets-->
         <dependency>
             <groupId>javax.websocket</groupId>
             <artifactId>javax.websocket-api</artifactId>
             <version>1.1</version>
+            <scope>provided</scope>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.glassfish.tyrus</groupId>
             <artifactId>tyrus-container-servlet</artifactId>
@@ -86,7 +88,7 @@
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
             <version>3.1.0</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>momentjs</artifactId>
@@ -119,7 +121,7 @@
             <artifactId>handlebars</artifactId>
             <version>4.0.2</version>
         </dependency>
-
+-->
         <!-- Logging -->
         <dependency>
             <groupId>ch.qos.logback</groupId>

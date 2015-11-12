@@ -22,10 +22,14 @@ public class Message implements Serializable {
 
     private byte[] body;
 
+    private boolean read;
+
     private Message(Builder builder) {
         this.id = builder.id.toString();
         this.subject = builder.subject;
         this.receptionDate = builder.receptionDate;
+        this.sender = builder.sender;
+        this.receiver = builder.receiver;
         this.body = Arrays.copyOf(builder.body, builder.body.length);
     }
 
@@ -53,6 +57,10 @@ public class Message implements Serializable {
 
         private String subject;
 
+        private String sender;
+
+        private String receiver;
+
         private byte[] body;
 
         public Builder() {
@@ -71,6 +79,16 @@ public class Message implements Serializable {
 
         public Builder withReceptionDate(Date receptionDate) {
             this.receptionDate = receptionDate;
+            return this;
+        }
+
+        public Builder withSender(String receptionDate) {
+            this.sender = sender;
+            return this;
+        }
+
+        public Builder withReceiver(String receiver) {
+            this.receiver = receiver;
             return this;
         }
 

@@ -39,6 +39,7 @@ public class ServerResource
         return null;
     }
 
+    @POST
     @Path("/start")
     public void start(){
 

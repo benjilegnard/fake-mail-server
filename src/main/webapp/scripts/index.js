@@ -16,7 +16,9 @@
             "from":"test@test.com",
             "to":"test@test.com",
             "subject":"TEST",
-            "body":""
+            "body":"",
+            "mime":"",
+            "read":false
         }
     });
 
@@ -58,7 +60,10 @@
         Backbone.history.start({pushState: true})
     }
 
-    document.addEventListener('DOMContentLoaded',domReady);
+    SMTP.socket = new WebSocket("ws://localhost:9001/smtp/live");
+
+    document.addEventListener('DOMContentLoaded', domReady);
 
     window.SMTP = SMTP;
+
 })(window,jQuery,Backbone);
