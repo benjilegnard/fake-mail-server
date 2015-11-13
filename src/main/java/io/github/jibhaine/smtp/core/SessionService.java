@@ -1,5 +1,6 @@
 package io.github.jibhaine.smtp.core;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.websocket.Session;
 import java.util.Collections;
 import java.util.Set;
@@ -8,6 +9,7 @@ import java.util.Set;
  * Keeps tracks of the currently opened sessions.
  * Created by blegrand on 12/11/2015.
  */
+@ApplicationScoped
 public class SessionService {
 
     private static Set<Session> userSessions = Collections.EMPTY_SET;

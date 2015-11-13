@@ -55,11 +55,11 @@
 		C472.59,444.54,473.949,443.186,473.949,441.513z"/>
 </g></svg>
         </div>
-            <label class="one columns">Host : </label>
-            <input name="host" type="text" class="six columns" value="127.0.0.1" disabled/>
-            <label class="one columns">Port : </label>
-            <input name="port" type="text" class="one columns" value="25000"/>
-            <button type="submit" class="two columns">Start</button>
+        <label class="one columns">Host : </label>
+        <input name="host" type="text" class="six columns" value="127.0.0.1" disabled/>
+        <label class="one columns">Port : </label>
+        <input name="port" type="text" class="one columns" value="25000"/>
+        <button type="submit" class="two columns">Start</button>
     </form>
 
 
@@ -73,9 +73,9 @@
 
     <h4>Message List</h4>
     <hr/>
-    <div id="message-list" class="row">
-    </div>
-    <div class="row">
+    <section id="message-list" class="row">
+    </section>
+    <div class="row">k
         <div class="one-half column">
             <h4>Basic Page</h4>
 
@@ -84,7 +84,11 @@
                     documentation</a>.</p>
         </div>
     </div>
-    <h4>Message Details</h4>
+
+    <section id="message-details">
+        <h4>Message Details</h4>
+
+    </section>
     <hr/>
 </div>
 <footer class="credits">
@@ -96,12 +100,16 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <script id="server-form-template" type="text/x-handlebars-template">
-
+    <label class="one columns" for="host-field">Host : </label>
+    <input id="host-field" name="host" type="text" class="six columns" value="{{host}}" disabled/>
+    <label class="one columns" for="port-field">Port : </label>
+    <input id="port-field" name="port" type="text" class="one columns" value="{{port}}"/>
+    <button type="submit" class="two columns">Start</button>
 </script>
 <script id="message-list-template" type="text/x-handlebars-template">
 
 </script>
-<script id="message-detail-template" type="text/x-handlebars-template">
+<script id="message-details-template" type="text/x-handlebars-template">
 
 </script>
 

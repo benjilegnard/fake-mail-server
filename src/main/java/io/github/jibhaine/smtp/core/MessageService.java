@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Encapsulate a list of received messages
  * Created by blegrand on 08/09/2015.
  */
 public class MessageService {

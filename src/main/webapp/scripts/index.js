@@ -1,9 +1,9 @@
-(function(window,$,Backbone){
+(function(window,$,_,Backbone, Handlebars){
     //basic namespace
     var SMTP = {};
 
     //BackBone models
-    SMTP.ServerModel = Backbone.Model.extend({
+    SMTP.Server = Backbone.Model.extend({
         "defaults":{
             "host":"127.0.0.1",
             "port":25000,
@@ -11,7 +11,7 @@
         }
     });
 
-    SMTP.MessageModel = Backbone.Model.extend({
+    SMTP.Message = Backbone.Model.extend({
         "defaults":{
             "from":"test@test.com",
             "to":"test@test.com",
@@ -22,20 +22,39 @@
         }
     });
 
-    SMTP.MessageCollection = Backbone.Collection.extend({
+    SMTP.Info = Backbone.Model.extend({
+        "defaults":{
+            "level":"alert",
+           "content":""
+        }
+    });
+
+    //collections
+    SMTP.Messages = Backbone.Collection.extend({
         url: '/messages'
     });
+    SMTP.FlashInfos = Backbone.Collection.extend({});
 
     SMTP.MessageListView = Backbone.View.extend({
-        model : SMTP.MessageCollection
+        collection : SMTP.Messages,
+        render:function(evt){
+    Handlebars.compile()
+        },
+        initialize:function(evt){
+
+        }
     });
 
-    SMTP.MessageDetailView = Backbone.View.extend({
-        model : SMTP.MessageModel
+    SMTP.FlashInfosView = Backbone.View.extend({
+        collection: SMTP.Messages
+    });
+
+    SMTP.MessageDetailsView = Backbone.View.extend({
+        model : SMTP.Message
     });
 
     SMTP.ServerFormView = Backbone.View.extend({
-        model : SMTP.ServerModel
+        model : SMTP.Server
     });
 
     SMTP.Router = Backbone.Router.extend({
@@ -53,17 +72,19 @@
         }
     });
 
-    function domReady(event){
+    $(document).ready(function(event){
         console.log("Starting SMTP app : ");
         console.trace(event);
         new SMTP.Router();
-        Backbone.history.start({pushState: true})
-    }
+        Backbone.history.start({pushState: true});
+        SMTP.views = {};
+        SMTP.views.serverForm = new SMTP.ServerFormView({model : new SMTP.Server(),el:'#server-form'});
+        SMTP.views.flashInfos = new SMTP.MessageDetailsView({collection : new SMTP.Messages(),el:'#messages-list'});
+        SMTP.views.messageList = new SMTP.MessageDetailsView({collection : new SMTP.Messages(),el:'#messages-list'});
+    });
 
     SMTP.socket = new WebSocket("ws://localhost:9001/smtp/live");
 
-    document.addEventListener('DOMContentLoaded', domReady);
-
     window.SMTP = SMTP;
 
-})(window,jQuery,Backbone);
+})(window,jQuery,_,Backbone, Handlebars);

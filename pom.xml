@@ -188,7 +188,8 @@
                 <version>1.7.0.1.1</version>
                 <configuration>
                     <sourceDirectory>${project.basedir}/src/main/webapp/styles</sourceDirectory>
-                    <outputDirectory>${project.build.directory}/${project.build.finalName}/styles</outputDirectory>
+                    <outputDirectory>${project.basedir}/src/main/webapp/styles</outputDirectory>
+                    <!--<outputDirectory>${project.build.directory}/${project.build.finalName}/styles</outputDirectory>-->
                     <compress>true</compress>
                     <includes>
                         <include>normalize.less</include>
