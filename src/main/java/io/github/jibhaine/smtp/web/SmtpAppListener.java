@@ -28,7 +28,12 @@ public class SmtpAppListener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         LOGGER.info("context initialized");
-        server = new SMTPServer(messageContext -> new FakeMailMessageHandler() );
+        server = new SMTPServer(new MessageHandlerFactory() {
+            @Override
+            public MessageHandler create(MessageContext ctx) {
+                return new FakeMailMessageHandler();
+            }
+        });
         server.setHostName("localhost");
         server.setPort(25000);
         server.start();
