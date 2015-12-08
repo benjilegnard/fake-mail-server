@@ -14,13 +14,13 @@ import javax.websocket.server.ServerEndpoint;
  * WebSocket Endpoint,
  * Created by blegrand on 12/11/2015.
  */
-@ApplicationScoped
+//@ApplicationScoped
 @ServerEndpoint(value="/live")
 public class LiveEndPoint {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LiveEndPoint.class);
 
-    @Inject
+    //@Inject
     SessionService sessionService;
 
     @OnOpen

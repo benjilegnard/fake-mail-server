@@ -1,5 +1,6 @@
-# Fake SMTP
-a fake smtp server embedded in a war webapp.
+# Fake Mail Server [![Build Status](https://travis-ci.org/jibhaine/fake-mail-server.svg)](https://travis-ci.org/jibhaine/fake-mail-server)
+
+A fake smtp server embedded in a war webapp.
 
 ## Why ?
 
@@ -8,3 +9,7 @@ I was growing tired of the application i'm currently working on sending exceptio
 So i created a simple wrapper around SubEthaSMTP, embedded in a war file.
 
 It has since grow in a webapp for displaying received mails.
+
+## How ?
+
+Just deploy the fms.war file in your favourite application server and it should work.

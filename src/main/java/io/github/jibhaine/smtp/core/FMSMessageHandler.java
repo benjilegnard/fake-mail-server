@@ -6,9 +6,7 @@ import org.subethamail.smtp.MessageHandler;
 import org.subethamail.smtp.RejectException;
 import org.subethamail.smtp.TooMuchDataException;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -17,9 +15,9 @@ import java.io.InputStream;
  */
 //@ApplicationScoped
 @Named
-public class FakeMailMessageHandler implements MessageHandler
+public class FMSMessageHandler implements MessageHandler
 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(FakeMailMessageHandler.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(FMSMessageHandler.class);
 
     @Override
     public void from(String from) throws RejectException {

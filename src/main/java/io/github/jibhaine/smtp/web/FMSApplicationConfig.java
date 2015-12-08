@@ -7,16 +7,15 @@ import org.slf4j.LoggerFactory;
 import javax.websocket.Endpoint;
 import javax.websocket.server.ServerApplicationConfig;
 import javax.websocket.server.ServerEndpointConfig;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  * Created by blegrand on 08/12/2015.
  */
-public class SmtpApplicationConfig implements ServerApplicationConfig {
+public class FMSApplicationConfig implements ServerApplicationConfig {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger(SmtpApplicationConfig.class);
+    public static final Logger LOGGER = LoggerFactory.getLogger(FMSApplicationConfig.class);
 
     public Set<ServerEndpointConfig> getEndpointConfigs(Set<Class<? extends Endpoint>> scanned) {
         LOGGER.debug("GET ENDPOINT CONFIGS");

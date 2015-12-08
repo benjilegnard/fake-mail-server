@@ -1,0 +1,36 @@
+@import "_variables";
+@import "_functions";
+
+// Alerts
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.message(@lightColor, @darkColor){
+  border:1px solid @lightColor;
+  background-color:white;
+  color:@darkColor;
+}
+
+.message
+{
+  padding: 0 14px;
+  height: 38px;
+  line-height: 38px;
+  font-weight:bold;
+  margin-bottom:2.5rem;
+  border-radius: @global-radius;
+
+  &.success
+  {
+    .message(@success-color,@success-border-color);
+  }
+
+  &.error
+  {
+    .message(@error-color,@error-border-color);
+  }
+
+  &.warning
+  {
+    .message(@warn-color,@warn-border-color);
+  }
+}

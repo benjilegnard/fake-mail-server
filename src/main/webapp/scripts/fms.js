@@ -1,9 +1,9 @@
 (function(window,$,_,Backbone, Handlebars){
     //basic namespace
-    var SMTP = {};
+    var FMS = {};
 
     //BackBone models
-    SMTP.Server = Backbone.Model.extend({
+    FMS.Server = Backbone.Model.extend({
         "defaults":{
             "host":"127.0.0.1",
             "port":25000,
@@ -11,7 +11,7 @@
         }
     });
 
-    SMTP.Message = Backbone.Model.extend({
+    FMS.Message = Backbone.Model.extend({
         "defaults":{
             "from":"test@test.com",
             "to":"test@test.com",
@@ -22,7 +22,7 @@
         }
     });
 
-    SMTP.Info = Backbone.Model.extend({
+    FMS.Info = Backbone.Model.extend({
         "defaults":{
             "level":"alert",
            "content":""
@@ -30,13 +30,13 @@
     });
 
     //collections
-    SMTP.Messages = Backbone.Collection.extend({
+    FMS.Messages = Backbone.Collection.extend({
         url: '/messages'
     });
-    SMTP.FlashInfos = Backbone.Collection.extend({});
+    FMS.FlashInfos = Backbone.Collection.extend({});
 
-    SMTP.MessageListView = Backbone.View.extend({
-        collection : SMTP.Messages,
+    FMS.MessageListView = Backbone.View.extend({
+        collection : FMS.Messages,
         render:function(evt){
     Handlebars.compile()
         },
@@ -45,19 +45,19 @@
         }
     });
 
-    SMTP.FlashInfosView = Backbone.View.extend({
-        collection: SMTP.Messages
+    FMS.FlashInfosView = Backbone.View.extend({
+        collection: FMS.Messages
     });
 
-    SMTP.MessageDetailsView = Backbone.View.extend({
-        model : SMTP.Message
+    FMS.MessageDetailsView = Backbone.View.extend({
+        model : FMS.Message
     });
 
-    SMTP.ServerFormView = Backbone.View.extend({
-        model : SMTP.Server
+    FMS.ServerFormView = Backbone.View.extend({
+        model : FMS.Server
     });
 
-    SMTP.Router = Backbone.Router.extend({
+    FMS.Router = Backbone.Router.extend({
         "routes":{
             "":"messageList",
             "messages":"messageList",
@@ -75,16 +75,16 @@
     $(document).ready(function(event){
         console.log("Starting SMTP app : ");
         console.trace(event);
-        new SMTP.Router();
+        new FMS.Router();
         Backbone.history.start({pushState: true});
-        SMTP.views = {};
-        SMTP.views.serverForm = new SMTP.ServerFormView({model : new SMTP.Server(),el:'#server-form'});
-        SMTP.views.flashInfos = new SMTP.MessageDetailsView({collection : new SMTP.Messages(),el:'#messages-list'});
-        SMTP.views.messageList = new SMTP.MessageDetailsView({collection : new SMTP.Messages(),el:'#messages-list'});
+        FMS.views = {};
+        FMS.views.serverForm = new FMS.ServerFormView({model : new FMS.Server(),el:'#server-form'});
+        FMS.views.flashInfos = new FMS.MessageDetailsView({collection : new FMS.Messages(),el:'#messages-list'});
+        FMS.views.messageList = new FMS.MessageDetailsView({collection : new FMS.Messages(),el:'#messages-list'});
     });
 
-    SMTP.socket = new WebSocket("ws://localhost:9001/smtp/live");
+    FMS.socket = new WebSocket("ws://localhost:9001/smtp/live");
 
-    window.SMTP = SMTP;
+    window.SMTP = FMS;
 
 })(window,jQuery,_,Backbone, Handlebars);
