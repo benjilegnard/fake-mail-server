@@ -22,6 +22,7 @@ public class ServerIntegrationTest
     public void prepareRestTemplate(){
         ClientHttpRequestFactory httpRequestFactory;
     }
+
     @Test
     public void testServerResource_GetMethod_ShouldReturnAServer(){
 

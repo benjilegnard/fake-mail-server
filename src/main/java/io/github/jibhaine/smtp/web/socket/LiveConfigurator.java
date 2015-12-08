@@ -7,3 +7,4 @@ import javax.websocket.server.ServerEndpointConfig;
  */
 public class LiveConfigurator extends ServerEndpointConfig.Configurator {
 }
+
