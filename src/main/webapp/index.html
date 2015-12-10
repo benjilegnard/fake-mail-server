@@ -33,42 +33,14 @@
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
-    <form id="server-form" class="row">
-        <div class="one columns">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="32px" height="32px" viewBox="0 0 492.106 492.106" style="enable-background:new 0 0 492.106 492.106;"
-	 xml:space="preserve">
-<g>
-	<path d="M40.619,313.651h107.708v31.043H40.619V313.651z M135.575,92.719c5.542,0,10.045-4.504,10.045-10.042
-		c0-5.533-4.504-10.034-10.045-10.034c-5.532,0-10.036,4.501-10.036,10.034C125.539,88.209,130.043,92.719,135.575,92.719z
-		 M200.729,92.719c5.544,0,10.048-4.504,10.048-10.042c0-5.533-4.504-10.034-10.048-10.034c-5.532,0-10.033,4.501-10.033,10.034
-		C190.696,88.209,195.197,92.719,200.729,92.719z M223.217,241.274v-9.224H40.619v31.046h107.824
-		c0.629-12.129,10.592-21.816,22.859-21.816h51.915V241.274z M24.187,279.528h124.141v17.691H24.187v63.913h124.141v34.814H0V29.409
-		h261.103V241.28h-21.453v-25.656H24.187V279.528z M174.261,82.671c0,14.6,11.877,26.474,26.468,26.474
-		c14.6,0,26.48-11.875,26.48-26.474c0-14.591-11.881-26.475-26.48-26.475C186.139,56.196,174.261,68.08,174.261,82.671z
-		 M109.107,82.671c0,14.6,11.875,26.474,26.468,26.474c14.597,0,26.48-11.875,26.48-26.474c0-14.591-11.884-26.475-26.48-26.475
-		C120.981,56.196,109.107,68.08,109.107,82.671z M24.187,196.793h215.462v-63.907H24.187V196.793z M40.619,149.317h182.598v31.043
-		H40.619V149.317z M185.787,168.037h24.997v-8.671h-24.997V168.037z M492.106,281.929v159.584c0,11.686-9.498,21.185-21.184,21.185
-		H187.67c-11.683,0-21.184-9.499-21.184-21.185V281.929c0-11.68,9.501-21.185,21.184-21.185h283.253
-		C482.608,260.744,492.106,270.255,492.106,281.929z M200.289,278.902l129.774,85.824l123.021-85.824H200.289z M473.949,441.513
-		V286.491L330.335,386.667l-145.691-96.346v151.191c0,1.673,1.359,3.027,3.026,3.027h283.253
-		C472.59,444.54,473.949,443.186,473.949,441.513z"/>
-</g></svg>
-        </div>
-        <label class="one columns">Host : </label>
-        <input name="host" type="text" class="six columns" value="127.0.0.1" disabled/>
-        <label class="one columns">Port : </label>
-        <input name="port" type="text" class="one columns" value="25000"/>
-        <button type="submit" class="two columns">Start</button>
-    </form>
 
 
     <h4>Flash Infos</h4>
     <hr/>
     <div id="flash-infos" class="row">
-        <div class="message error row">Error Message</div>
-        <div class="message warning row">Warn Message</div>
-        <div class="message success row">Success Message</div>
+        <div class="alert error row">Error Message</div>
+        <div class="alert warning row">Warn Message</div>
+        <div class="alert success row">Success Message</div>
     </div>
 
     <h4>Message List</h4>
@@ -90,12 +62,57 @@
 
     </section>
     <hr/>
+    <section id="credits" class="page">
+        <h3>Credits</h3>
+        <ul>
+            <li>Coded by <a href="https://jibhaine.github.io/">jibhaine</a></li>
+            <li>SVG icons <a href="http://www.flaticon.com/packs/general-ui/">designed by Freepik</a></li>
+            <li>CSS base by <a href="http://getskeleton.com/">Skeleton</a></li>
+            <li>Built over <a href="https://github.com/voodoodyne/subethasmtp">SubethaSMTP</a> Server</li>
+            <li>Mail favicon by <a href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</a></li>
+        </ul>
+    </section>
+    <section id="help" class="page">
+        <h3>Help</h3>
+    </section>
+    <section id="options" class="page">
+        <h2>Options</h2>
+
+        <h3>Server options.</h3>
+
+        <form id="server-form" class="row">
+            <div class="one columns">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="32px" height="32px" viewBox="0 0 492.106 492.106" style="enable-background:new 0 0 492.106 492.106;"
+	 xml:space="preserve">
+<g>
+	<path d="M40.619,313.651h107.708v31.043H40.619V313.651z M135.575,92.719c5.542,0,10.045-4.504,10.045-10.042
+		c0-5.533-4.504-10.034-10.045-10.034c-5.532,0-10.036,4.501-10.036,10.034C125.539,88.209,130.043,92.719,135.575,92.719z
+		 M200.729,92.719c5.544,0,10.048-4.504,10.048-10.042c0-5.533-4.504-10.034-10.048-10.034c-5.532,0-10.033,4.501-10.033,10.034
+		C190.696,88.209,195.197,92.719,200.729,92.719z M223.217,241.274v-9.224H40.619v31.046h107.824
+		c0.629-12.129,10.592-21.816,22.859-21.816h51.915V241.274z M24.187,279.528h124.141v17.691H24.187v63.913h124.141v34.814H0V29.409
+		h261.103V241.28h-21.453v-25.656H24.187V279.528z M174.261,82.671c0,14.6,11.877,26.474,26.468,26.474
+		c14.6,0,26.48-11.875,26.48-26.474c0-14.591-11.881-26.475-26.48-26.475C186.139,56.196,174.261,68.08,174.261,82.671z
+		 M109.107,82.671c0,14.6,11.875,26.474,26.468,26.474c14.597,0,26.48-11.875,26.48-26.474c0-14.591-11.884-26.475-26.48-26.475
+		C120.981,56.196,109.107,68.08,109.107,82.671z M24.187,196.793h215.462v-63.907H24.187V196.793z M40.619,149.317h182.598v31.043
+		H40.619V149.317z M185.787,168.037h24.997v-8.671h-24.997V168.037z M492.106,281.929v159.584c0,11.686-9.498,21.185-21.184,21.185
+		H187.67c-11.683,0-21.184-9.499-21.184-21.185V281.929c0-11.68,9.501-21.185,21.184-21.185h283.253
+		C482.608,260.744,492.106,270.255,492.106,281.929z M200.289,278.902l129.774,85.824l123.021-85.824H200.289z M473.949,441.513
+		V286.491L330.335,386.667l-145.691-96.346v151.191c0,1.673,1.359,3.027,3.026,3.027h283.253
+		C472.59,444.54,473.949,443.186,473.949,441.513z"/>
+</g></svg>
+            </div>
+            <label class="one columns">Host : </label>
+            <input name="host" type="text" class="six columns" value="127.0.0.1" disabled/>
+            <label class="one columns">Port : </label>
+            <input name="port" type="text" class="one columns" value="25000"/>
+            <button type="submit" class="two columns">Start</button>
+        </form>
+        <h3>Client options.</h3>
+
+    </section>
 </div>
-<footer class="credits">
-    <p> Code by <a href="https://jibhaine.github.io/">jibhaine</a> <br/>
-        mail icon by <a href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</a>
-    </p>
-</footer>
+
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 

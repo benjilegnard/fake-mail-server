@@ -12,7 +12,7 @@ import java.util.Set;
 @ApplicationScoped
 public class SessionService {
 
-    private static Set<Session> userSessions = Collections.EMPTY_SET;
+    private static Set<Session> userSessions = Collections.emptySet();
 
     public void add(Session session) {
         userSessions.add(session);

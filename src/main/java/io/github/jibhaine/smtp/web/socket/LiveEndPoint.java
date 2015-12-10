@@ -14,15 +14,18 @@ import javax.websocket.server.ServerEndpoint;
  * WebSocket Endpoint,
  * Created by blegrand on 12/11/2015.
  */
-//@ApplicationScoped
+//@Stateless
 @ServerEndpoint(value="/live")
 public class LiveEndPoint {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LiveEndPoint.class);
 
-    //@Inject
+    @Inject
     SessionService sessionService;
 
+    public LiveEndPoint(){
+        sessionService = new SessionService();
+    }
     @OnOpen
     public void onOpen(Session session) {
         LOGGER.info("New connection with client: {}", session.getId());

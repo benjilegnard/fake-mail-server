@@ -1,4 +1,8 @@
-package io.github.jibhaine.smtp.dto;
+package io.github.jibhaine.smtp.beans;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -8,6 +12,9 @@ import java.util.UUID;
 /**
  * Immutable Message DTO with its Builder.
  */
+
+@JsonIgnoreProperties( ignoreUnknown = true )
+@JsonDeserialize(builder=Message.Builder.class)
 public class Message implements Serializable {
 
     private String id;
@@ -49,6 +56,7 @@ public class Message implements Serializable {
         return body;
     }
 
+    @JsonPOJOBuilder
     public static class Builder {
 
         private UUID id;

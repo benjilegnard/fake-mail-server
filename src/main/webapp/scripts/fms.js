@@ -83,8 +83,8 @@
         FMS.views.messageList = new FMS.MessageDetailsView({collection : new FMS.Messages(),el:'#messages-list'});
     });
 
-    FMS.socket = new WebSocket("ws://localhost:9001/smtp/live");
+    FMS.socket = new WebSocket("ws://localhost:8888/fms/live");
 
-    window.SMTP = FMS;
+    window.FMS = FMS;
 
 })(window,jQuery,_,Backbone, Handlebars);

@@ -1,7 +1,7 @@
 package io.github.jibhaine.smtp.rest;
 
 import io.github.jibhaine.smtp.core.ServerService;
-import io.github.jibhaine.smtp.dto.Server;
+import io.github.jibhaine.smtp.beans.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

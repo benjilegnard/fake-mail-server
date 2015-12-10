@@ -4,13 +4,13 @@
 // Alerts
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.message(@lightColor, @darkColor){
+.alert(@lightColor, @darkColor){
   border:1px solid @lightColor;
   background-color:white;
   color:@darkColor;
 }
 
-.message
+.alert
 {
   padding: 0 14px;
   height: 38px;
@@ -21,16 +21,16 @@
 
   &.success
   {
-    .message(@success-color,@success-border-color);
+    .alert(@success-color,@success-border-color);
   }
 
   &.error
   {
-    .message(@error-color,@error-border-color);
+    .alert(@error-color,@error-border-color);
   }
 
   &.warning
   {
-    .message(@warn-color,@warn-border-color);
+    .alert(@warn-color,@warn-border-color);
   }
 }

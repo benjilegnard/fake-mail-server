@@ -1,4 +1,6 @@
-package io.github.jibhaine.smtp.dto;
+package io.github.jibhaine.smtp.beans;
+
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
 /**
  * Created by blegrand on 08/09/2015.
@@ -35,6 +37,7 @@ public final class Server {
         STOPPED
     }
 
+    @JsonPOJOBuilder
     public static class Builder{
 
         private String host;

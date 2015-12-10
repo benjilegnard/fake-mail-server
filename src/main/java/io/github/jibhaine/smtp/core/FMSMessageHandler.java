@@ -6,6 +6,8 @@ import org.subethamail.smtp.MessageHandler;
 import org.subethamail.smtp.RejectException;
 import org.subethamail.smtp.TooMuchDataException;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,10 +15,13 @@ import java.io.InputStream;
 /**
  * Created by blegrand on 08/12/2015.
  */
-//@ApplicationScoped
+@ApplicationScoped
 @Named
 public class FMSMessageHandler implements MessageHandler
 {
+    @Inject
+    private MessageService messageService;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(FMSMessageHandler.class);
 
     @Override

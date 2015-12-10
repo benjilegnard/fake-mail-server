@@ -1,14 +1,11 @@
 package io.github.jibhaine.smtp.core;
 
-import io.github.jibhaine.smtp.dto.Message;
+import io.github.jibhaine.smtp.beans.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.subethamail.wiser.WiserMessage;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,7 +18,7 @@ public class MessageService {
     private static final Logger LOGGER = LoggerFactory.getLogger(MessageService.class);
 
     @Inject
-    private  SessionService sessionService;
+    private SessionService sessionService;
 
     private Map<String, Message> storedMessages;
 
