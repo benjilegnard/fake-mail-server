@@ -34,12 +34,12 @@
                 <artifactId>javaee-api</artifactId>
                 <version>7.0</version>
             </dependency>
-            -->
         <dependency>
             <groupId>org.apache.openejb</groupId>
             <artifactId>openejb</artifactId>
             <version>3.1.4</version>
         </dependency>
+            -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>

@@ -10,6 +10,16 @@ So i created a simple wrapper around SubEthaSMTP, embedded in a war file.
 
 It has since grow in a webapp for displaying received mails.
 
+## What ?
+
 ## How ?
 
 Just deploy the fms.war file in your favourite application server and it should work.
+
+
+## TODO
+
+* Use The mail template from PureCSS : http://purecss.io/layouts/email/
+* Use websockets to refresh mail list.
+* Update unread mails in favicon and page title.
+
