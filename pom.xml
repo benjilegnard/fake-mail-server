@@ -17,7 +17,7 @@
         <subethasmtp.version>3.1.7</subethasmtp.version>
         <jersey.version>2.21</jersey.version>
         <slf4j.version>1.7.12</slf4j.version>
-        <logback.version>1.1.3</logback.version>
+        <logback.version>1.2.0</logback.version>
         <jackson.version>2.5.4</jackson.version>
     </properties>
 
